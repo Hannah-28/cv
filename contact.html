@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <form name = "myForm" action="" onsubmit="return validateForm()" method="POST">
+                <input type="text" placeholder = "Name" minlength="4" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Title" name="fname">
+                <input type="text" placeholder="Message" minlength="20" required>
+                <input type="submit" value="Submit" id="button">
+            </form>
+        </div>        
+    </div>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "")    {
+                alert ("Title must be filled out");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
